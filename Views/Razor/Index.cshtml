@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*"@* is used for multi line comments and // is used for single line comment"*@
+        @*Single Line statements *@
+        @{ int Count = 0; }
+        @{ Count += 100; }
+        @{ Object obj = new Object(); }
+        @{string name = "Abhay";}
+
+        @*In-Line Statements*@
+        <h3>Value of count is : @Count</h3>
+        <h3>obj is type of : @obj.GetType()</h3>
+        <h3>Value of name = @name</h3>
+
+        @*Multiline statements *@
+        @{
+            string Date = DateTime.Now.ToShortDateString();
+            string Time = DateTime.Now.ToShortTimeString();
+            <h3>Today's Date is: @Date</h3>
+            <h3>Current Time is: @Time</h3>
+
+            <text>Today's Date is:</text> @Date //to add text in razor block
+            <br>
+
+            <text>Current Time is:</text> @Time //to add text in razor block
+            <br>
+            @: this is also used to add static text
+        }
+
+        <hr>
+        @* If condition in Razor programming *@
+        @{
+            int x = 130; 
+            if (x % 2 == 0)
+            {
+                <span>@x is an even number.</span>
+            }
+            else
+            {
+                <span>@x is an odd number.</span>
+            }
+        }
+        <hr>
+
+
+
+
+    </div>
+</body>
+</html>
