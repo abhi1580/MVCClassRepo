@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Validate", "Account"))
+        {
+            @Html.Label("Enter Name:",new {@class="text-info"});
+            <br>
+            @Html.TextBox("txtName", "", new {placeholder="Please enter the name",style="background-color:yellow;color:red" });
+            //, @readonly = true
+            <br>
+            @Html.Label("Enter Password", new { @class = "text-info" });
+            <br>
+            @Html.Password("txtPwd", "", new {placeholder="Please enter the password"});
+
+            <br>
+            <br>
+            <input type="submit" value="Login" class="btn btn-primary"/>
+            <input type="reset" class="btn btn-secondary"/>
+
+
+        }
+    </div>
+</body>
+</html>
