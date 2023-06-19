@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using MVCUIDesigning.Models;
 using System.Web.Mvc;
-using MVCUIDesigning.Models;
 namespace MVCUIDesigning.Controllers
 {
     public class StudentController : Controller
@@ -19,8 +15,27 @@ namespace MVCUIDesigning.Controllers
         public ViewResult AddStudent(Student student)
         {
 
-            return View("DisplayStudent",student);
+            return View("DisplayStudent", student);
         }
+        [HttpGet]
+        public ViewResult AddStudentST()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult AddStudentST(Student student)
+        {
+
+            return View("DisplayStudentST", student);
+        }
+
+        public PartialViewResult Header()
+        {
+            return PartialView("_Header");
+        }
+
 
     }
 }

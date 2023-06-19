@@ -1,8 +1,4 @@
 ﻿using MVCUIDesigning.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MVCUIDesigning.Controllers
@@ -38,7 +34,7 @@ namespace MVCUIDesigning.Controllers
         [HttpPost]
         public ViewResult AddEmp(Employee model)
         {
-            return View("DisplayEmp2",model);
+            return View("DisplayEmp2", model);
         }
     }
 }

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MVCUIDesigning.Controllers
 {
     public class AccountController : Controller
     {
         [HttpGet]
-     public ViewResult Login()
+        public ViewResult Login()
         {
             return View();
         }
@@ -26,7 +22,7 @@ namespace MVCUIDesigning.Controllers
                 return View("Success");
             }
             else
-                Session["User"]=Name;
+                Session["User"] = Name;
             {
                 return View("Failure");
             }

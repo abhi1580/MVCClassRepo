@@ -13,6 +13,10 @@
 </head>
 <body>
     <div style="border:solid 3px;padding:2px ">
+        @{Html.RenderPartial("_Header");}
+        @*OR*@
+        @*@Html.Partial("_Header")*@
+
         @using (Html.BeginForm())
         {
             @Html.Label("Student Id:");<br>
@@ -34,10 +38,10 @@
             @Html.TextBox("Fees")<br>
 
             @Html.Label("Address:")<br>
-            @Html.TextArea("Address","",4,20,null)<br><br>
+            @Html.TextArea("Address", "", 4, 20, null)<br><br>
 
-            <input type="submit" value="Save"/>
-            <input type="reset"/>
+            <input type="submit" value="Save" />
+            <input type="reset" />
 
 
         }

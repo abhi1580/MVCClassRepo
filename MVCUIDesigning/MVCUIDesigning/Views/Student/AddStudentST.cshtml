@@ -1,0 +1,68 @@
+﻿@model MVCUIDesigning.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddStudentST</title>
+</head>
+<body>
+    <div>
+
+        @{
+            //MvcHtmlString htmlString = Html.Partial("_Header"); //Convert partial view to ,mvc html string
+            //string str = htmlString.ToString(); // Converting htmlString to normal string
+            //OR
+            string str = Html.Partial("_Header").ToString(); //Convert partial view to string directly
+
+            str = str.Replace("150", "200"); //raplaces the value 150 with 200 from the html code
+            MvcHtmlString newMVCHtmlString = new MvcHtmlString(str); //Converting string valur to MVCHtmlString value
+
+            @newMVCHtmlString
+        }
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Student Id:");<br>
+            @Html.TextBoxFor(S => S.Sid);<br>
+
+            @Html.Label("Student Name:");<br>
+            @Html.TextBoxFor(S => S.Name)<br>
+
+            @Html.Label("Class:");<br>
+            //List<int> list = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //SelectList items = new SelectList(list);
+            //Insted of above two line compress the code as below
+            SelectList items = new SelectList(new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+            @Html.DropDownListFor(S => S.Class, items, "-Select Class-");<br>
+
+            @Html.Label("Gender:");<br>
+            @Html.RadioButtonFor(S => S.Gender, "Male");@:Male
+            //To add static text use text tag or @:someText
+            @Html.RadioButtonFor(S => S.Gender, "Female");@:Female <br>
+
+
+
+
+
+
+
+
+            //Below are strictly typed label html helper
+            @Html.LabelFor(S => S.Fees)<br>
+            @Html.TextBoxFor(S => S.Fees)<br>
+
+            @Html.LabelFor(S => S.Address)<br>
+            @Html.TextAreaFor(S => S.Address, 4, 20, null)<br><br>
+            //Here only 4 params are required for TextAreaFor
+
+            <input type="submit" value="Save" />
+            <input type="reset" />
+        }
+    </div>
+</body>
+</html>
