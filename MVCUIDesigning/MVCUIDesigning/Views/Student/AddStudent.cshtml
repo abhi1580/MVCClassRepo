@@ -1,0 +1,46 @@
+﻿@model MVCUIDesigning.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddStudent</title>
+</head>
+<body>
+    <div style="border:solid 3px;padding:2px ">
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Student Id:");<br>
+            @Html.TextBox("Sid");<br>
+            @Html.Label("Stundet name:")<br>
+            @Html.TextBox("Name")<br>
+            @Html.Label("Class:")
+            //List<int> list = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //SelectList items = new SelectList(list);
+            //Insted of above two line compress the code as below
+
+            SelectList items = new SelectList(new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+            @Html.DropDownList("Class", items, "-Select Class-");<br>
+            @Html.Label("Gender:")
+            @Html.RadioButton("Gender", "Male");@:Male
+            //To add static text use text tag or @:someText
+            @Html.RadioButton("Gender", "Female");@:Female <br>
+            @Html.Label("Fees:")<br>
+            @Html.TextBox("Fees")<br>
+
+            @Html.Label("Address:")<br>
+            @Html.TextArea("Address","",4,20,null)<br><br>
+
+            <input type="submit" value="Save"/>
+            <input type="reset"/>
+
+
+        }
+    </div>
+</body>
+</html>
