@@ -106,6 +106,12 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\Header.jpg" />
+    <Content Include="Images\Image6.jpeg" />
+    <Content Include="Images\Image5.jpeg" />
+    <Content Include="Images\Image4.jpeg" />
+    <Content Include="Images\Image3.jpeg" />
+    <Content Include="Images\Image2.jpeg" />
+    <Content Include="Images\Image1.jpeg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -117,11 +123,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,6 +170,8 @@
     <Content Include="Views\Student\AddStudentST.cshtml" />
     <Content Include="Views\Student\DisplayStudentST.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Customer\DisplayCustomers.cshtml" />
+    <Content Include="Views\Shared\_CustomerView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

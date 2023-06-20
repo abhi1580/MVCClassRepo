@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MVCUIDesigning.Models.Customer>
+@*OR*@
+@*@model List<MVCUIDesigning.Models.Customer>*@
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayCustomers</title>
+</head>
+<body>
+    <div>
+        @{Html.RenderPartial("_Header");};
+        @foreach (var customer in Model)
+        {
+            @Html.Partial("_CustomerView", customer);
+        }
+    </div>
+</body>
+</html>
