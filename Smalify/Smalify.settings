@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <Width>450</Width>
+  <Height>350</Height>
+  <MinifiedFileSuffix>min</MinifiedFileSuffix>
+  <Left>400</Left>
+  <SavedFolders>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;F:\MVC Class Projects\Git Class Data\MVCClassRepo\MinificationAndBundling\MinificationAndBundling\Content&lt;/string&gt;
+&lt;/ArrayOfString&gt;</SavedFolders>
+  <Top>200</Top>
+  <Js_OutputSingleLine>True</Js_OutputSingleLine>
+  <WindowState>Normal</WindowState>
+</Settings>
